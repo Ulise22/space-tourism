@@ -13,13 +13,162 @@
     color: #fff;
     display: flex;
     justify-content: space-between;
-    padding: 50px;
 }
 
 .home__article {
-    margin-top: 20%;
+    margin-top: 18%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home__article__container {
+    width: 450px;
+}
+
+.home__article__headTitle{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    color: #D0D6F9;
+    line-height: 0px;
+    letter-spacing: 4.725px;
+}
+
+.home__article__title {
+    font-size: 150px;
+    font-weight: 400;
+    line-height: 0px;
+    font-family: 'Bellefair', serif;
+}
+
+.home__article__text {
+    color: #D0D6F9;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: .5px;
+    line-height: 28px;
 }
 
 .home__explore {
-    margin-top: 20%;
+    margin-top: 18%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home__explore__btn {
+    height: 274px;
+    width: 274px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.home__explore__btn::after {
+    content: "";
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    background-color: #ffffff22;
+    z-index: 0;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+.home__explore__btn:hover::after {
+    opacity: 1;
+    transition: opacity .4s ease;
+}
+
+.home__explore__btn__text {
+    font-size: 32px;
+    font-family: 'Bellefair', serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+@media screen and (max-width: 960px) {
+    .home {
+        height: 100%;
+        background-image: url("../pages/images/background-home-tablet.jpg");
+    }
+
+    .home__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home__article {
+        text-align: center;
+    }
+
+    .home__article__headTitle {
+        font-size: 20px;
+    }
+
+    .home__article__text {
+        font-size: 16px;
+    }
+
+    .home__explore {
+        padding: 0 0 110px 0 ;
+    }
+    
+    .home__explore__btn {
+        width: 242px;
+        height: 242px;
+    }
+
+    .home__explore__btn::after {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .home {
+        background-image: url("../pages/images/background-home-mobile.jpg");
+    }
+
+    .home__article {
+        width: 90%;
+        margin-top: 120px;
+    }
+
+    .home__article__headTitle {
+        font-size: 16px;
+    }
+
+    .home__article__title {
+        font-size: 80px;
+    }
+
+    .home__article__text {
+        font-size: 15px;
+    }
+
+    .home__explore__btn {
+        width: 150px;
+        height: 150px;
+    }
+
+    .home__explore__btn::after {
+        width: 230px;
+        height: 230px;
+    }
+
+    .home__explore__btn__text {
+        font-size: 20px;
+    }
 }

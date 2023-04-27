@@ -86,6 +86,10 @@
         display: none;
     }
 
+    .nav__logo {
+        margin-left: 5%;
+    }
+
     .nav__menu {
         width: 65%;
     }
@@ -108,7 +112,7 @@
 
     .nav__burguer__container {
         display: block;
-        z-index: 20;
+        z-index: 200;
         margin-right: 10px;
         cursor: pointer;
     }
@@ -126,7 +130,7 @@
 
     .nav__menu.activeMenu {
         right: 0;
-        z-index: 15;
+        z-index: 60;
         transition: all .4s ease-out;
     }
 

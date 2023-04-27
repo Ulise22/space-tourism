@@ -12,17 +12,22 @@ export default function Home() {
         <main className={styles.home}>
           <section className={styles.home__container}>
             <article className={styles.home__article}>
-              <h4>SO, YOU WANT TO TRAVEL TO</h4>
-              <h1>SPACE</h1>
-              <p>Let's face it, if you want to go to space, you might as well 
-                genuinely go to outer space and not hover kind of on the 
-                edge of it. Well sit back and relax because we'll give you a 
-                truly out of this world experience!
-              </p>
+              <div className={styles.home__article__container}>
+                <h4 className={styles.home__article__headTitle}>SO, YOU WANT TO TRAVEL TO</h4>
+                <h1 className={styles.home__article__title}>SPACE</h1>
+                <p className={styles.home__article__text}>Let's face it, if you want to go to space, you might as well 
+                  genuinely go to outer space and not hover kind of on the 
+                  edge of it. Well sit back and relax because we'll give you a 
+                  truly out of this world experience!
+                </p>
+              </div>
             </article>
 
             <article className={styles.home__explore}>
-              <h1>Explore</h1>
+              <div className={styles.home__explore__btn}>
+                <h1 className={styles.home__explore__btn__text}>EXPLORE</h1>
+              </div>
+              
             </article>
           </section>
         </main>
