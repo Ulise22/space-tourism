@@ -5,4 +5,98 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    overflow: hidden;
+}
+
+.crew__container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 200px;
+    color: #fff;
+}
+
+.crew__pageTitle {
+    font-family: 'Barlow Condensed';
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.crew__pageTitle span {
+    font-weight: 600;
+    opacity: .25;
+}
+
+.crew__member__container {
+    display: flex;
+}
+
+.crew__member {
+    margin-top: 100px;
+}
+
+.crew__member__role {
+    font-family: "Bellafair";
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 0;
+    text-transform: uppercase;
+    opacity: .5;
+}
+
+.crew__member__name {
+    font-family: "Bellafair";
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.crew__member__bio {
+    font-family: "Barlow";
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    color: #D0D6F9;
+    width: 444px;
+}
+
+.crew__member__btn__container {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin-top: 100px;
+}
+
+.crew__member__btn {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    opacity: 0.17;
+    border: none;
+    cursor: pointer;
+}
+
+.crew__member__btn.activeBtn{ 
+    opacity: 1;
+}
+
+.crew__member__btn:hover {
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 960px) {
+    .crew {
+        min-height: 100vh;
+        height: 100%;
+        background-image: url("./images/background-crew-tablet.jpg");
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .crew {
+        background-image: url("./images/background-crew-mobile.jpg");
+    }
 }
