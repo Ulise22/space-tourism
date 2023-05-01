@@ -58,6 +58,7 @@
     font-weight: 300;
     color: #D0D6F9;
     letter-spacing: 2.7px;
+    padding: 0;
 }
 
 .destination__info__list__item {
@@ -153,7 +154,7 @@
 
     .destination__info__list {
         width: 285px;
-        margin-left: calc(45% - 142px);
+        margin: 0 auto;
     }
     
 }
@@ -191,10 +192,6 @@
     }
 
     .destination__info__list {
-        margin-left: 0;
-        width: 100%;
-        margin-left: calc(40% - 118px);
         font-size: 14px;
-        flex-wrap: wrap;
     }
 }
