@@ -1,5 +1,6 @@
 .crew {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     width: 100%;
     background-image: url("./images/background-crew-desktop.jpg");
     background-size: cover;
@@ -10,6 +11,7 @@
 
 .crew__container {
     width: 80%;
+    height: 100%;
     margin: 0 auto;
     margin-top: 200px;
     color: #fff;
@@ -30,6 +32,8 @@
 
 .crew__member__container {
     display: flex;
+    justify-content: space-between;
+    height: 406px;
 }
 
 .crew__member {
@@ -49,7 +53,7 @@
     font-family: "Bellafair";
     font-weight: 300;
     font-size: 56px;
-    line-height: 20px;
+    line-height: 50px;
     text-transform: uppercase;
 }
 
@@ -67,7 +71,7 @@
     display: flex;
     gap: 30px;
     padding: 0;
-    margin-top: 100px;
+    margin-top: 94px;
 }
 
 .crew__member__btn {
@@ -87,10 +91,16 @@
     opacity: 0.5;
 }
 
+.crew__member__image {
+    margin-top: 100%;
+}
+
+.crew__line {
+    display: none;
+}
+
 @media screen and (max-width: 960px) {
     .crew {
-        min-height: 100vh;
-        height: 100%;
         background-image: url("./images/background-crew-tablet.jpg");
     }
 }
