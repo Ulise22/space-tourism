@@ -55,8 +55,8 @@ export default function Crew () {
                                 </li>
                             </ul>
                         </article>
-                        <article>
-                            <Image className={styles.crew__member__image} src={pictures[infoIndex]} alt="crew" />
+                        <article className={styles.crew__image__container}>
+                            <Image className={styles.crew__image} src={pictures[infoIndex]} alt="crew" />
 
                             <span className={styles.crew__line}></span>
                         </article>

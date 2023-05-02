@@ -1,6 +1,5 @@
 .crew {
-    min-height: 100vh;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background-image: url("./images/background-crew-desktop.jpg");
     background-size: cover;
@@ -33,7 +32,7 @@
 .crew__member__container {
     display: flex;
     justify-content: space-between;
-    height: 406px;
+    height: 712px;
 }
 
 .crew__member {
@@ -87,26 +86,151 @@
     opacity: 1;
 }
 
+.crew__member__btn.activeBtn:hover{ 
+    opacity: 1;
+}
+
 .crew__member__btn:hover {
     opacity: 0.5;
 }
 
-.crew__member__image {
-    margin-top: 100%;
+.crew__image__container {
+    align-self: flex-end;
 }
 
 .crew__line {
     display: none;
+    height: 1px;
+    width: 100%;
+    background-color: #383B4B;
 }
 
 @media screen and (max-width: 960px) {
     .crew {
+        min-height: 100vh;
+        height: 100%;
         background-image: url("./images/background-crew-tablet.jpg");
+    }
+
+    .crew__container {
+        width: 90%;
+        margin-top: 136px;
+    }
+
+    .crew__member__container {
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+        gap: 80px;
+        width: 80%;
+        margin: -40px auto;
+    }
+
+    .crew__pageTitle {
+        font-size: 20px;
+    }
+
+    .crew__member {
+        text-align: center;
+        
+    }
+
+    .crew__member__role {
+        font-size: 24px;
+    }
+
+    .crew__member__name {
+        font-size: 40px;
+        line-height: 36px;
+    }
+
+    .crew__member__bio {
+        width: 100%;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .crew__image__container {
+        margin: 0 auto;
+    }
+
+    .crew__image {
+        height: 532px;
+        width: fit-content;
+    }
+
+    .crew__member__btn__container {      
+        width: fit-content;
+        margin: 40px auto;
+        gap: 16px;
+    }
+
+    .crew__member__btn {
+        width: 10px;
+        height: 10px;
     }
 }
 
 @media screen and (max-width: 420px) {
     .crew {
         background-image: url("./images/background-crew-mobile.jpg");
+        background-attachment: scroll;
+    }
+
+    .crew__member__container {
+        flex-direction: column-reverse;
+        gap: 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .crew__member {
+        display: grid;
+        grid-template-areas: 
+        "list"
+        "role"
+        "name"
+        "text";
+        margin-top: -20px;
+    }
+
+    .crew__member__role {
+        font-size: 16px;
+    }
+
+    .crew__member__name {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .crew__member__bio {
+        font-size: 15px;
+        line-height: 25px;
+        height: fit-content;
+    }
+
+    .crew__image__container {
+        height: 223px;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .crew__image {
+        height: inherit;
+    }
+
+    .crew__line {
+        display: block;
+        position: absolute;
+        width: 100%;
+    }
+
+    .crew__member__btn__container {
+        align-self: flex-start;
+        grid-area: list;
     }
 }
