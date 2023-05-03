@@ -6,39 +6,186 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    overflow: hidden;
+}
+
+.tech__container {
+    margin-top: 200px;
+    color: #fff;
+    display: grid;
+    margin-left: 165px;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: 
+    "pageTitle pageTitle pageTitle"
+    "list info image";
+}
+
+.tech__pageTitle {
+    grid-area: pageTitle;
+    font-family: 'Barlow Condensed';
+    letter-spacing: 4.725px;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.tech__pageTitle span {
+    opacity: .25;
+    font-weight: 700;
+}
+
+.tech__list {
+    grid-area: list;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 130px;
+}
+
+.tech__list__item {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bellefair';
+    font-size: 32px;
+    font-weight: 300;
+    border: 1px solid #ffffff5a;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.tech__list__item:hover {
+    border: 1px solid #fff;
+}
+
+.tech__list__item.techActive {
+    background-color: #fff;
+    color: #000;
+}
+
+.tech__info {
+    grid-area: info;
+    margin-top: 130px;
+    margin-left: 80px;
+    height: 304px;
+    max-width: 470px;
+}
+
+.tech__info__tag {
+    font-family: 'Barlow Condensed';
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2.7px;
+    line-height: 0;
+    color: #D0D6F9;
+}
+
+.tech__info__name {
+    font-family: 'Bellefair';
+    font-size: 56px;
+    font-weight: 300;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+.tech__info__desc {
+    font-family: 'Barlow';
+    font-size: 18px;
+    line-height: 32px;
+    color: #D0D6F9;
+    font-weight: 300;
+}
+
+/* images */
+
+.tech__image {
+    height: 527px;
+    width: 515px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: image;
+    margin-left: 29%;
 }
 
 .firstImage {
     background-image: url("./images/image-launch-vehicle-portrait.jpg");
-    height: 100px;
-    width: 100px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .secondImage {
     background-image: url("./images/image-spaceport-portrait.jpg");
-    height: 100px;
-    width: 100px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .thirdImage {
     background-image: url("./images/image-space-capsule-portrait.jpg");
-    height: 100px;
-    width: 100px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 
-@media screen and(max-width: 960px) {
+@media screen and (max-width: 960px) {
     .technology {
+        min-height: 100vh;
+        height: 100%;
         background-image: url("./images/background-technology-tablet.jpg");
+    }
+
+    .tech__container {
+        margin-left: 0;
+        margin-top: 136px;
+        grid-template-rows: 20px 1fr;
+        grid-template-areas: 
+        "pageTitle"
+        "image"
+        "list" 
+        "info" 
+        ;
+    }
+
+    .tech__pageTitle {
+        font-size: 20px;
+        letter-spacing: 3.375px;
+        margin-left: 5%;
+    }
+
+    .tech__list {
+        flex-direction: row;
+        margin: 60px auto;
+        gap: 16px;
+    }
+
+    .tech__list__item {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .tech__info {
+        margin: 0 auto;
+        height: fit-content;
+        text-align: center;
+    }
+
+    .tech__info__name {
+        font-size: 40px;
+        line-height: 36px;
+    }
+
+    .tech__info__desc {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    /* images */
+
+    .tech__image {
+        margin-top: 60px;
+        margin-left: 0;
+        width: 100%;
+        height: 310px;
+        background-attachment: local;
+        background-size: cover;
+        background-position: center;
     }
 
     .firstImage {
@@ -54,8 +201,56 @@
     }
 }
 
-@media screen and(max-width: 420px) {
+@media screen and (max-width: 420px) {
     .technology {
         background-image: url("./images/background-technology-mobile.jpg");
+    }
+
+    .tech__container {
+        margin-top: 90px;
+        grid-template-rows: 20px 1fr;
+    }
+
+    .tech__pageTitle {
+        font-size: 16px;
+        letter-spacing: 2.7px;
+        text-align: center;
+    }
+    .tech__list {
+        margin: 45px auto;
+        width: 90%;
+        margin-left: calc(39% - 152px/2);
+    }
+
+    .tech__list__item {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .tech__info {
+        margin: 0 auto;
+        height: fit-content;
+        text-align: center;
+        width: 90%;
+    }
+
+    .tech__info__tag {
+        font-size: 14px;
+        letter-spacing: 2.3625px;
+    }
+
+    .tech__info__name {
+        font-size: 24px;
+        line-height: 20px;
+    }
+
+    .tech__info__desc {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .tech__image {
+        height: 170px;
     }
 }
