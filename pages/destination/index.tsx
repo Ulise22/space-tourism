@@ -21,10 +21,10 @@ export default function Destination () {
 
                     <section className={styles.destination__info}>
                         <ul className={styles.destination__info__list}>
-                            <li className={styles.destination__info__list__item} onClick={() => setDesIndex(0)} >MOON</li>
-                            <li className={styles.destination__info__list__item} onClick={() => setDesIndex(1)} >MARS</li>
-                            <li className={styles.destination__info__list__item} onClick={() => setDesIndex(2)} >EUROPA</li>
-                            <li className={styles.destination__info__list__item} onClick={() => setDesIndex(3)} >TITAN</li>
+                            <li className={desIndex == 0 ? `${styles.destination__info__list__item} ${styles.activeItem}` : `${styles.destination__info__list__item}`} onClick={() => setDesIndex(0)} >MOON</li>
+                            <li className={desIndex == 1 ? `${styles.destination__info__list__item} ${styles.activeItem}` : `${styles.destination__info__list__item}`} onClick={() => setDesIndex(1)} >MARS</li>
+                            <li className={desIndex == 2 ? `${styles.destination__info__list__item} ${styles.activeItem}` : `${styles.destination__info__list__item}`} onClick={() => setDesIndex(2)} >EUROPA</li>
+                            <li className={desIndex == 3 ? `${styles.destination__info__list__item} ${styles.activeItem}` : `${styles.destination__info__list__item}`} onClick={() => setDesIndex(3)} >TITAN</li>
                         </ul>
                         <h1 className={styles.destination__info__title}> {destinations[desIndex].name} </h1>
                         <p className={styles.destination__info__text}> {destinations[desIndex].description} </p>

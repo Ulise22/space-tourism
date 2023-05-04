@@ -63,6 +63,16 @@
 
 .destination__info__list__item {
     cursor: pointer;
+    padding: 12px 0;
+}
+
+.destination__info__list__item:hover {
+    border-bottom: 3px solid #aaa;
+}
+
+.destination__info__list__item.activeItem {
+    border-bottom: 3px solid #fff;
+    color: #fff;
 }
 
 .destination__info__title {

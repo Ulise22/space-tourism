@@ -98,13 +98,6 @@
     align-self: flex-end;
 }
 
-.crew__line {
-    display: none;
-    height: 1px;
-    width: 100%;
-    background-color: #383B4B;
-}
-
 @media screen and (max-width: 960px) {
     .crew {
         min-height: 100vh;
@@ -180,7 +173,7 @@
     .crew__member__container {
         flex-direction: column-reverse;
         gap: 0;
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
     }
 
@@ -211,22 +204,16 @@
 
     .crew__image__container {
         height: 223px;
-        position: relative;
         width: 100%;
         margin: 0 auto;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
+        border-bottom: 1px solid #383B4B;
     }
 
     .crew__image {
         height: inherit;
-    }
-
-    .crew__line {
-        display: block;
-        position: absolute;
-        width: 100%;
     }
 
     .crew__member__btn__container {

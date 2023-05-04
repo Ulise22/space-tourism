@@ -57,8 +57,6 @@ export default function Crew () {
                         </article>
                         <article className={styles.crew__image__container}>
                             <Image className={styles.crew__image} src={pictures[infoIndex]} alt="crew" />
-
-                            <span className={styles.crew__line}></span>
                         </article>
                     </div>
                 </section>

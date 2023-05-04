@@ -131,6 +131,8 @@
         opacity: 1;
         flex-direction: column;
         transition: all .4s ease-in;
+        z-index: 100;
+        display: block;
     }
 
     .nav__menu.activeMenu {
@@ -143,13 +145,21 @@
         width: 100%;
         display: flex;
         gap: 10px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .firstItem {
+        margin-top: 130px;
     }
 
     .nav__menu__item:after {
         width: 1px;
         height: 0;
-        left: 128px;
+        left: 99%;
         bottom: 50%;
+        display: flex;
+        align-items: center;
     }
 
     .nav__menu__item.activePage::after {
