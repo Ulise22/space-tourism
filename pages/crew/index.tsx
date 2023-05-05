@@ -1,7 +1,7 @@
 import LayoutPage from "@/components/LayoutPage";
 import data from '../../components/data.json';
 import { useState } from "react";
-import { pictures } from "./pictures";
+import { pictures } from "../../components/crew_pictures";
 import Image from "next/image";
 import styles from './Crew.module.css'
 

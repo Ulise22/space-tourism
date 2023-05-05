@@ -1,7 +1,7 @@
 import LayoutPage from "@/components/LayoutPage";
 import styles from './Destination.module.css'
 import { useState } from "react";
-import {pictures} from './pictures';
+import {pictures} from '../../components/destination_pictures';
 import Image from "next/image";
 import data from '../../components/data.json';
 
